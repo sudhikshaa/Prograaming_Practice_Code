@@ -1,0 +1,26 @@
+Linear Search Algorithm .....
+
+import java.util.*;
+
+public class Linear_search {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int target = sc.nextInt();
+        int ans = linearSearchAlgo(arr,target);
+        System.out.println(ans);
+    }
+
+    static int linearSearchAlgo(int nums[], int targets){
+        if(nums.length == 0) return -1;
+        for(int i=0;i<nums.length;i++){
+            int ele = nums[i];
+            if(ele == targets){
+                return i;
+            }
+        }
+        return -1;
+      }
+
+    }
